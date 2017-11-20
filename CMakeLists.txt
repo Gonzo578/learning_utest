@@ -21,4 +21,13 @@ add_subdirectory(src)
 # Add components to projects build
 add_subdirectory(components)
 
+# Project source files
+set (project_SRC
+    src/main.cc
+    )
+
+# Main project target configuration
+add_executable (projTemplate ${project_SRC})
+
 # Target link libraries
+target_link_libraries(projTemplate toDoCore)

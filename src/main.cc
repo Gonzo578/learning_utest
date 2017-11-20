@@ -2,7 +2,7 @@
 using std::cout;
 using std::endl;
 
-#include "ToDo.h"
+#include "ToDo/includes/ToDo.h"
 
 int main (int, char**) {
 	ToDo list;

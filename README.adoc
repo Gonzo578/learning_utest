@@ -1,3 +1,26 @@
 = Template Project
 
 == Folder Structure
+
+=== build - Folder
+Folder used for out of source builds.
+
+=== components - Folder
+Folder used for SW components used within the project. Components can be maintained in 
+other git repositories.
+
+=== docs - Folder
+Folder used for high level project documentation.
+
+=== external - Folder
+Folder used for external libraries and components used within the project. Examples can
+be google test or other software packages.
+
+=== includes - Folder
+Folder used for project include files.
+
+=== src - Folder
+Folder used for project source files.
+
+=== test - Folder
+Folder used for project tests.

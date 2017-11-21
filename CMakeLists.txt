@@ -36,10 +36,16 @@ add_subdirectory(components)
 # Project source files
 set (project_SRC
     src/main.cc
-    )
+)
+    
+# Project component libraries
+set (project_comp_LIBS
+    toDoCore
+    printerCore
+)
 
 # Main project target configuration
 add_executable (projTemplate ${project_SRC})
 
 # Target link libraries
-target_link_libraries(projTemplate toDoCore ${Boost_LIBRARIES})
+target_link_libraries(projTemplate ${project_comp_LIBS} ${Boost_LIBRARIES})

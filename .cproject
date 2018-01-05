@@ -41,8 +41,8 @@
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.assembler.base.2012647623" name="GCC Assembler" superClass="cdt.managedbuild.tool.gnu.assembler.base">
 								<option id="gnu.both.asm.option.include.paths.1933622695" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/project_template/components}&quot;"/>
 									<listOptionValue builtIn="false" value="/home/gonzo/Libs/boost_1_64_0/include"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/learning_utest/components}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.820957258" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
@@ -67,4 +67,5 @@
 			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

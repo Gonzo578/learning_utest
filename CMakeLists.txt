@@ -43,6 +43,9 @@ set (project_comp_LIBS
 
 )
 
+# Configure used C++ standard to C++11
+set(CMAKE_CXX_STANDARD 11)
+
 # Main project target configuration
 add_executable (projTemplate ${project_SRC})
 

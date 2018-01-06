@@ -27,11 +27,11 @@ set(BOOST_LIBRARYDIR "../../Libs/boost_1_64_0/lib")
 find_package(Boost 1.64 EXACT REQUIRED COMPONENTS program_options)
 
 # Include directories
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/components)
+#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/components)
 include_directories(SYSTEM ${Boost_INCLUDE_DIRS}) 
 
 # Add components to projects build
-add_subdirectory(components)
+#add_subdirectory(components)
 
 # Project source files
 set (project_SRC
@@ -40,8 +40,7 @@ set (project_SRC
     
 # Project component libraries
 set (project_comp_LIBS
-    toDoCore
-    printerCore
+
 )
 
 # Main project target configuration

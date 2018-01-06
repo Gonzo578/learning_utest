@@ -2,7 +2,7 @@
 #set (Soundex_SRC src/Soundex.cpp)
 
 # Component include pathes
-#include_directories(${CMAKE_CURRENT_SOURCE_DIR}/includes)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/includes)
 
 # Component is compiled into a library
 #add_library(toDoCore ${toDo_SRC})

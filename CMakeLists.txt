@@ -35,7 +35,7 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
 
 # Project source files
 set (project_SRC
-    src/main.cc
+    src/main.cpp
 )
     
 # Project component libraries

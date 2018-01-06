@@ -31,7 +31,7 @@ find_package(Boost 1.64 EXACT REQUIRED COMPONENTS program_options)
 include_directories(SYSTEM ${Boost_INCLUDE_DIRS}) 
 
 # Add components to projects build
-#add_subdirectory(components)
+add_subdirectory(components)
 
 # Project source files
 set (project_SRC

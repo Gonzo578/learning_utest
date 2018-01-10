@@ -26,3 +26,7 @@ TEST_F(SoundexEncoding, ReplacesConsonantsWithAppropriateDigits) {
 TEST_F(SoundexEncoding, IgnoresNoneAlphabetics) {
 	ASSERT_THAT(soundex.encode("A#"), Eq("A000"));
 }
+
+TEST_F(SoundexEncoding, DISABLED_ReplacesMultipleConstantsWithDigits) {
+	ASSERT_THAT(soundex.encode("Acdl"), Eq("A234"));
+}

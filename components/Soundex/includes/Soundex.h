@@ -20,7 +20,7 @@ public:
 			{'r', "6"}
 		};
 
-		auto it = encodings.find(letter);
+		auto it = encodings.find(lower(letter));
 		return (it == encodings.end()) ? NotADigit : it->second;
 	}
 
@@ -65,6 +65,10 @@ private:
 
 	std::string upperFront(const std::string& string) const {
 		return std::string(1, std::toupper(static_cast<unsigned char>(string.front())));
+	}
+
+	char lower(const char c) const {
+		return std::tolower(static_cast<unsigned char>(c));
 	}
 };
 

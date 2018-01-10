@@ -1,0 +1,19 @@
+Book Review: Modern C++ Programming with Test-Driven Development
+================================================================
+
+:toc:
+:toc-placement: preamble
+:toclevels: 1
+
+== Notes
+
+.Kapitel 2
+* Unterschied zwischen "Test Driven" und "Testen"
+** Test Driven bedeutet, der Test treibt das Design der SW. Es wird so weit getestet um das Design
+    abzusichern und das Verständnis in die Funktionalität zu unterstützen. Dabei werden ggf. nicht
+    alle möglichen Alternativen abgetestet (Beispiel Wertetabellen). Bei TDD solle jedoch nur das
+    umgesetzt werden was auch wirklich benötigt wird (kein up front Code). Jeder Code Teil wird
+    zunächst mit einem fehlschlagenden Test begonnen. ==> Das sollte auch zu einer 100% Code
+    Abdeckung führen.
+** Testen ist dagegegen sehr Spezifikationsgetrieben. Es sollen alle Features geprüft werden und
+    das auch mit allen möglichen Werkekombinationen (sofern sinnvoll).

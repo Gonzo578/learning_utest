@@ -17,3 +17,6 @@ Book Review: Modern C++ Programming with Test-Driven Development
     Abdeckung führen.
 ** Testen ist dagegegen sehr Spezifikationsgetrieben. Es sollen alle Features geprüft werden und
     das auch mit allen möglichen Werkekombinationen (sofern sinnvoll).
+* Neue Matcher von GoogleMock werden über using Direktive eingebunden. "StartsWith" auf Seite 43
+    kommt ohne Kommentar neu hinzu. => Siehe GoogleMock Cheat Sheet!
+    

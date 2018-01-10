@@ -7,7 +7,7 @@
 class Soundex {
 public:
 	std::string encode(const std::string& word) const {
-		return zeroPad(head(word) + encodedDigits(tail(word)));
+		return zeroPad(upperFront(head(word)) + encodedDigits(tail(word)));
 	}
 
 	std::string encodedDigit(char letter) const {
@@ -58,6 +58,10 @@ private:
 
 	bool isComplete(const std::string& encoding) const {
 		return encoding.length() == (MaxCodeLength - 1);
+	}
+
+	std::string upperFront(const std::string& string) const {
+		return std::string(1, std::toupper(static_cast<unsigned char>(string.front())));
 	}
 };
 

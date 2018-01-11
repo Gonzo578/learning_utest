@@ -72,9 +72,8 @@ private:
 
 	void encodeTail(const std::string& word, std::string& encoding) const {
 		for (auto letter : tail(word)) {
-			if (isComplete(encoding)) break;
-
-			encodeLetter(letter, encoding);
+			if (!isComplete(encoding))
+				encodeLetter(letter, encoding);
 		}
 	}
 

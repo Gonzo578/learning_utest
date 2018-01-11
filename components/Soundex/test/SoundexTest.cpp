@@ -59,3 +59,7 @@ TEST_F(SoundexEncoding, IgnoresCaseWhenEncodingConsonants) {
 TEST_F(SoundexEncoding, CombinesDuplicateWhen2ndLetterDuplicates1st) {
 	ASSERT_THAT(soundex.encode("Bbcd"), Eq("B230"));
 }
+
+TEST_F(SoundexEncoding, PeriodLettersAreIgnored){
+	ASSERT_THAT(soundex.encode("Mr.Smith"), Eq("M625"));
+}

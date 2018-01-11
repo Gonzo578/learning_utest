@@ -72,13 +72,16 @@ private:
 
 	void encodeTail(const std::string& word, std::string& encoding) const {
 		for (auto letter : tail(word)) {
-			if (isComplete(encoding))
-				break;
+			if (isComplete(encoding)) break;
 
-			auto digit = encodedDigit(letter);
-			if ((digit != NotADigit) && (digit != lastDigit(encoding)))
-				encoding += digit;
+			encodeLetter(letter, encoding);
 		}
+	}
+
+	void encodeLetter(char letter, std::string& encoding) const {
+		auto digit = encodedDigit(letter);
+		if ((digit != NotADigit) && (digit != lastDigit(encoding)))
+			encoding += digit;
 	}
 };
 

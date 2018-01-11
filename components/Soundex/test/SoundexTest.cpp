@@ -1,8 +1,7 @@
 #include "gmock/gmock.h"
 #include "Soundex.h"
 
-using testing::Eq;
-using testing::StartsWith;
+using namespace testing;
 
 class SoundexEncoding : public testing::Test {
 public:

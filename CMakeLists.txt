@@ -21,10 +21,15 @@ include(gmock)
 enable_testing()
 
 # Add boost cpp library to project
-set(BOOST_ROOT "../../Libs/boost_1_64_0")
-set(BOOST_INCLUDEDIR "../../Libs/boost_1_64_0/include")
-set(BOOST_LIBRARYDIR "../../Libs/boost_1_64_0/lib")
-find_package(Boost 1.64 EXACT REQUIRED COMPONENTS program_options)
+#set(BOOST_ROOT "../../Libs/boost_1_64_0")
+#set(BOOST_INCLUDEDIR "../../Libs/boost_1_64_0/include")
+#set(BOOST_LIBRARYDIR "../../Libs/boost_1_64_0/lib")
+#find_package(Boost 1.64 EXACT REQUIRED COMPONENTS program_options)
+
+find_package(Systemd)
+set_package_properties(Systemd PROPERTIES TYPE RECOMMENDED PURPOSE "Enables logind support")
+add_definitions(${SYSTEMD_DEFINITIONS})
+include_directories(${SYSTEMD_INCLUDE_DIRS})
 
 # Include directories
 #include_directories(${CMAKE_CURRENT_SOURCE_DIR}/components)
@@ -32,6 +37,9 @@ include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
 
 # Add components to projects build
 add_subdirectory(components)
+
+include(FindPkgConfig)
+pkg_search_module(SYSTEMD REQUIRED libsystemd)
 
 # Project source files
 set (project_SRC
@@ -50,4 +58,6 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable (projTemplate ${project_SRC})
 
 # Target link libraries
-target_link_libraries(projTemplate ${project_comp_LIBS} ${Boost_LIBRARIES})
+target_link_libraries(projTemplate ${project_comp_LIBS} ${Boost_LIBRARIES} ${SYSTEMD_LIBRARIES})
+
+feature_summary(WHAT ALL)
